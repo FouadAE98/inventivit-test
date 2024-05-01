@@ -1,0 +1,7 @@
+{
+  "name": "testfront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

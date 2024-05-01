@@ -1,0 +1,105 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="red">
+  <app-home-left></app-home-left>
+  <app-home-right></app-home-right>
+</ion-content> -->
+
+<div class="w-full flex h-screen">
+  <div
+    class="w-1/2 bg-[#80B1B7] space-y-5 flex items-start px-24 flex-col justify-center"
+  >
+    <div class="space-y-5 w-3/4 flex flex-col justify-center">
+      <p class="text-white font-bold text-xl">Pour commencer</p>
+      <p class="text-white text-sm text-justify">
+        Faire votre Shynleï, jouer avec, c'est l'occasion d'écouter vos rêves,
+        de les partager et de prendre confiance dans votre richesse.
+      </p>
+    </div>
+    <div class="w-3/4">
+      <form
+        (ngSubmit)="submite()"
+        [formGroup]="myForm"
+        class="w-full space-y-7"
+      >
+        <div class="flex flex-col">
+          <label class="text-white" for="name">Nom et prénom :</label>
+          <input
+            class="bg-transparent border-b-2 text-white focus:ring-primary-600 focus:border-white-600 block outline-0 border-white"
+            type="text"
+            id="name"
+            formControlName="fullName"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label class="text-white mb-2" for="name">Mon intention:</label>
+          <p class="text-white text-xs mb-2">
+            L'intention, l'objectif de ce Shynlei
+          </p>
+          <input
+            class="bg-transparent border-b-2 text-white focus:ring-primary-600 focus:border-white-600 block outline-0 border-white"
+            type="text"
+            id="name"
+            formControlName="intention"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="w-1/2 space-y-5 flex items-start px-24 flex-col justify-center">
+    <div class="space-y-5">
+      <p class="font-bold text-xl">Votre Shynleï c'est</p>
+      <p>
+        7 étapes, 2 fiches pour prendre note des rencontres, 1 page pour
+        éclairer le sens, 3 interprétations pour vous aider..
+      </p>
+    </div>
+    <div class="grid grid-cols-2">
+      <div class="flex items-center m-5">
+        <img class="w-10 h-10" src="../../assets/Page-1.svg" alt="" />
+        <p class="text-xs">1. Le rêve liber l'expression</p>
+      </div>
+      <div class="flex items-center m-5">
+        <img class="w-10 h-10" src="../../assets/Page-2.svg" alt="" />
+        <p class="text-xs">2. Le sens éclaire le parcours</p>
+      </div>
+      <div class="flex items-center m-5">
+        <img class="w-10 h-10" src="../../assets/Page-3.svg" alt="" />
+        <p class="text-xs">3. La différence rend unique</p>
+      </div>
+      <div class="flex items-center m-5">
+        <img class="w-10 h-10" src="../../assets/Page-4.svg" alt="" />
+        <p class="text-xs">4. La valeur humaine met en mouvement</p>
+      </div>
+      <div class="flex items-center m-5">
+        <img class="w-10 h-10" src="../../assets/Page-5.svg" alt="" />
+        <p class="text-xs">5. La clé exprime le style</p>
+      </div>
+      <div class="flex items-center m-5">
+        <img class="w-10 h-10" src="../../assets/Page-6.svg" alt="" />
+        <p class="text-xs">6. Le parcours associe rêve et réalité</p>
+      </div>
+      <div class="flex items-center m-5">
+        <img class="w-10 h-10" src="../../assets/Page-7.svg" alt="" />
+        <p class="text-xs">7. Le ciel bleu révèle l'alignement</p>
+      </div>
+    </div>
+    <div class="w-full flex justify-center">
+      <button
+        type="submit"
+        [disabled]="myForm.invalid"
+        [class.bg-teal-700]="!myForm.invalid" [class.bg-gray-300]="myForm.invalid"
+        (click)="submite()"
+        class="bg-[#7BBBBA] hover:bg-[#80B1B7] cursor-pointer rounded-md p-3 w-[35%] font-bold text-sm text-white"
+      >
+        EXPRIMER MES RÊVES
+      </button>
+    </div>
+  </div>
+</div>
